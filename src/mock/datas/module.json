@@ -1,0 +1,26 @@
+{ 
+    "success":true,
+    "module":[
+        {
+            "id":1,
+            "moudleName":"销售管理",
+             "imgSrc":"/static/image/module/xsgl.png"
+        },
+        {
+            "id":2,
+            "moudleName":"销售管理",
+            "imgSrc":"/static/image/module/cbgl.png"
+        },
+        {
+            "id":3,
+            "moudleName":"销售管理",
+            "imgSrc":"/static/image/module/zlgl.png"
+        },
+        {
+            "id":4,
+            "moudleName":"销售管理",
+            "imgSrc":"/static/image/module/qmys.png"
+        }
+        
+    ]
+}
