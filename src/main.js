@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import App from './App'
 import router from './router'
 import mock from './mock'
+import 'font-awesome/css/font-awesome.css'
+
 
 Vue.use(VueRouter)
 Vue.use(mock)

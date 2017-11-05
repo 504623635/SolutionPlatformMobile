@@ -31,7 +31,7 @@
       </swiper-item>
     </swiper>
   <div class="tab-content">
-    <tab :line-width="2" active-color="#288AF0">
+    <tab :line-width="2" active-color="#ff4a00">
         <tab-item @click.native="goHot" selected >热门方案</tab-item>
         <tab-item @click.native="goGood" >经典方案</tab-item>
         <tab-item @click.native="goQus" >提问</tab-item>
@@ -118,8 +118,8 @@ function getResult (val) {
   }
   return rs
 }
-</script>
-<style scoped>
+</script >
+<style scoped lang="less">
 .black {
   background-color: gary;
 }

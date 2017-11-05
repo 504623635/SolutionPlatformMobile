@@ -6,26 +6,24 @@
       </div>
   
       <div class="login-form">
-        <div class="login-input vux-1px-b">
-          <label for="user"
-                 class="icon iconfont icon-account"></label>
-          <input id="user"
-                 v-model="user"
-                 placeholder="用户名"></input>
-        </div>
+        <group>
+          <x-input title=""  placeholder="请输入用户名">
+            <div slot="label" style="padding-right:10px;display:block;" width="24" height="24">
+            <i  class="fa fa-user-o"></i>
+            </div>
+          </x-input>
+        </group>
   
-        <div class="login-input vux-1px-b">
-          <label for="pass"
-                 class="icon iconfont icon-security"></label>
-          <input id="pass"
-                 v-model="pass"
-                 type="password"
-                 placeholder="密码"></input>
-        </div>
+        <group>
+            <x-input title=""  placeholder="请输入密码">
+              <div slot="label" style="padding-right:10px;display:block;" width="24" height="24">
+              <i  class="fa fa-key"></i>
+              </div>
+            </x-input>
+          </group>
   
         <div class="login-submit">
-          <button type="button"
-                  @click="loginSubmit">登录</button>
+          <x-button type="primary">登录</x-button>
         </div>
       </div>
   
@@ -39,13 +37,16 @@
 </template>
 
 <script>
-import { Loading, Toast } from 'vux'
+import { Loading, Toast,XInput,Group,XButton } from 'vux'
 
 export default {
   name: 'Login',
   components: {
     Loading,
-    Toast
+    Toast,
+    XInput,
+    Group,
+    XButton 
   },
   data () {
     return {
@@ -91,7 +92,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style  scoped lang="less">
+@import '../../assets/css/theme.less';
 .login {
   box-sizing: border-box;
   background-color: #fff;
@@ -115,26 +117,7 @@ export default {
   padding: 0 50px;
 }
 
-.login-input {
-  box-sizing: border-box;
-  /*width: 275px;*/
-  margin: 25px auto 0;
-  padding: 5px 10px;
-}
 
-.login-input input {
-  background-color: inherit;
-  border: 0;
-  font-size: 14px;
-}
-
-.login-input .icon {
-  display: inline-block;
-  min-width: 17px;
-  font-size: 17px;
-  margin-right: 18px;
-  color: #B2B2B2;
-}
 
 .login-submit {
   margin-top: 30px;
@@ -143,7 +126,7 @@ export default {
 
 .login-submit button {
   width: 100%;
-  background-color: #000;
+  background-color: @base-color;
   color: #fff;
   line-height: 44px;
   font-size: 16px;
