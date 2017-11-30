@@ -11,27 +11,15 @@
     </search>
 
     <swiper  dots-position="center"  dots-class="dots-style">
-      <swiper-item  v-for="i in 4" :key="i" class="black" >
-       <flexbox :gutter="0">
-          <flexbox-item  v-for="item in moduleList" :key="moduleList.id">
-              <div class="flex-demo">
-                   <div><img :src="item.imgSrc" class="moduleImg-style"></img></div>
-                 <div><span>{{item.moudleName}}</span></div>
-              </div>
-          </flexbox-item>
-        </flexbox>
-         <flexbox :gutter="0">
-        <flexbox-item  v-for="item in moduleList" :key="moduleList.id">
-              <div class="flex-demo">
-                  <div><img :src="item.imgSrc" class="moduleImg-style"></img></div>
-                 <div><span>{{item.moudleName}}</span></div>
-              </div>
-          </flexbox-item>
-        </flexbox>
+      <swiper-item  v-for="i in 4" :key="i" class="black"  >
+        <router-link tag="div" v-for="item in moduleList" :key="moduleList.id"  :to="{path: '/login'}"  class="flex-demo">
+            <div><img :src="item.imgSrc" class="moduleImg-style"></img></div>
+            <div><span>{{item.moudleName}}</span></div>
+        </router-link>
       </swiper-item>
     </swiper>
   <div class="tab-content">
-    <tab :line-width="2" active-color="#ff4a00">
+    <tab :line-width="2" active-color="#288AF0">
         <tab-item @click.native="goHot" selected >热门方案</tab-item>
         <tab-item @click.native="goGood" >经典方案</tab-item>
         <tab-item @click.native="goQus" >提问</tab-item>
@@ -83,6 +71,9 @@ export default {
     },
     goQus(){
       this.$router.push('/question')
+    },
+    GoToModule(item){
+      return {path: '/login'}
     }
   },
   data () {
@@ -118,8 +109,8 @@ function getResult (val) {
   }
   return rs
 }
-</script >
-<style scoped lang="less">
+</script>
+<style scoped>
 .black {
   background-color: gary;
 }
@@ -137,7 +128,10 @@ function getResult (val) {
 }
 
 .flex-demo {
+  width:25%;
+  float:left;
   line-height:1;
+  text-align:center;
   text-align: center;
   color: black;
   background-color: #fff;
@@ -158,7 +152,7 @@ function getResult (val) {
 .moduleImg-style{
 width:45px;
 height:45px;
-margin:12px 15px 0px 15px;
+margin-top:12px;
 }
 .tab-content{
   padding:5px;

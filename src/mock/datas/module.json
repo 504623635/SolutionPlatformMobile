@@ -20,6 +20,26 @@
             "id":4,
             "moudleName":"销售管理",
             "imgSrc":"/static/image/module/qmys.png"
+        },
+        {
+            "id":5,
+            "moudleName":"销售管理",
+             "imgSrc":"/static/image/module/xsgl.png"
+        },
+        {
+            "id":6,
+            "moudleName":"销售管理",
+            "imgSrc":"/static/image/module/cbgl.png"
+        },
+        {
+            "id":7,
+            "moudleName":"销售管理",
+            "imgSrc":"/static/image/module/zlgl.png"
+        },
+        {
+            "id":8,
+            "moudleName":"销售管理",
+            "imgSrc":"/static/image/module/qmys.png"
         }
         
     ]

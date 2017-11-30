@@ -2,9 +2,12 @@
   <div>
      <group gutter="0">
       <cell-box v-for="i in 10" :key="i" :border-intent=true :is-link=false >
-        <div @click="goLogn">
-          <div class="cell-icon"></div>
-        </div>
+        <router-link :to="{path: '/login'}" class="list-item">
+          <div tag="div" class="cell-icon"></div>
+          <div tag="div" class="cell-content">
+              <div tag="div" class="cell-title">555555555555555555</div>
+          </div>
+        </router-link>
        </cell-box>
     </group>
     <divider>hot</divider>
@@ -48,11 +51,26 @@ export default {
 
 </script>
 <style scoped>
-.cell-icon {
-  height: 64px;
-  width: 64px;
-  margin-right: 13px;
+.list-item {
+width:100%;
+
+}
+.list-item .cell-icon {
+  width: 20%;
+  height:64px;
   background-color: #eee;
+  float:left;
+}
+.list-item .cell-content{
+  text-align:left;
+  width:80%;
+  float:left;
+}
+
+.list-item .cell-content .cell-title{
+  font-size:14px;
+  color:black;
+
 }
 
 

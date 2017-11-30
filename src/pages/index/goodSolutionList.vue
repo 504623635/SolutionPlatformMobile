@@ -2,27 +2,26 @@
   <div>
     我是good页面
      <divider>good</divider>
-
-      <grid :cols="4" >
-      <grid-item v-for="i in 6" :key="i"  >
-        <span class="grid-center">{{i}}</span>
-      </grid-item>
-    </grid>
   </div>
   
 </template>
 
 <script>
-import { Divider,Search, Group,Grid,GridItem } from 'vux'
+import { Divider,Search, Group, Cell,Swiper,SwiperItem,Flexbox, FlexboxItem,XImg ,Tab, TabItem } from 'vux'
 
 export default {
   components: {
     Divider,
     Search,
     Group,
-    Grid,
-    GridItem
-   
+    Cell,
+    Swiper,
+    SwiperItem,
+    Flexbox,
+    FlexboxItem,
+    XImg ,
+    Tab,
+    TabItem
   },
   methods: {
    
@@ -42,6 +41,7 @@ export default {
 
 </script>
 <style scoped>
+
 
 
 </style>
